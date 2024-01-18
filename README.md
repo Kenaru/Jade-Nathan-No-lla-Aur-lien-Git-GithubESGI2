@@ -10,11 +10,14 @@
 - Ecrire sur une branche de travail (checkout, branch)
 - Fusionner une branche dans une autre (merge)
 
+## Initialiser un depot et consulter le status
+Pour initialiser un repertoire il suffit d'un `git init`
+Et pour verifier le status, un `git status` permet de voir les derniers commits et si le fichier est bien enregistre. Le nom du fichier est en rouge si ce n'est pas le cas et en vert si le fichier est bien enregistre. 
+
 ## Ecrire dans l'historique
 
 Pour écrire dans l'historique, il faut utiliser la commande git add. Cette commande permet d'ajouter des fichiers dans l'index. L'index est un espace de stockage temporaire qui contient les fichiers qui seront ajoutés dans l'historique.
 L'enregistrement dans l'historique se fait au momment de l'utilisation de git commit qui est, en elle même, une version du projet. L'historique sera donc coomposé de tous les commit qu'on créera.
-
 
 ## Versionning avec Git et Github
 
@@ -97,45 +100,4 @@ Fusionner la nouvelle branche:
 git merge ma-nouvelle-branche
 
 La gestion des branches dans Git est un aspect crucial de la gestion de versions. Elle permet à plusieurs développeurs de travailler sur différentes fonctionnalités en parallèle, sans interférer les uns avec les autres.
-
-
-## Understanding `git log` in Git
-
-The `git log` command is used to display the commit history of a Git repository. It shows a list of commits along with their details like the hash, author, date, and commit message.
-
-## Basic Usage
-
-To view the commit history, simply type:
-
-This command will show a list of all commits starting with the most recent. By default, it displays the commit hash, author, date, and the commit message.
-
-## Viewing Specific Details
-
-You can customize the output of `git log` with various options:
-
-- To see a condensed, one-line version of the history:
-
-- To include which files were altered and the relative number of changes in each file:
-
-- To view the complete diff of each commit:
-
-## Filtering the Log
-
-You can also filter the output based on time, author, or files:
-
-- To show commits by a specific author:
-
-- To show commits before a specific date:
-
-- To show commits that include a particular file:
-
-## Visualizing Commit History
-
-For a graphical representation of the commit history:
-
-- Use the `--graph` option to see an ASCII graph of the branch and merge history:
-
-Combining `--graph` with `--oneline` and `--all` gives a clear overview of the entire history, including all branches:
-
-`git log` is a powerful tool to understand the evolution of a project. With its various options and filters, you can get detailed insights into the history of your repository.
 
