@@ -10,6 +10,9 @@
 - Ecrire sur une branche de travail (checkout, branch)
 - Fusionner une branche dans une autre (merge)
 
+## Initialiser un depot et consulter le status
+Pour initialiser un repertoire il suffit d'un 'git init'
+Et pour verifier le status, un 'git status' permet de voir les derniers commits et si le fichier est bien enregistre. Le nom du fichier est en rouge si ce n'est pas le cas et en vert si le fichier est bien enregistre. 
 
 ## Versionning avec Git et Github
 
