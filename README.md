@@ -30,6 +30,69 @@ Les Server les plus populaires sont : Github, Gitlab
 Differentes interfaces graphiques pour GitHub sont disponibles pour l'utiliser. GitHub Desktop par exemple pour Mac et Windows, l'integration d'un IDE dans VSCode ou d'autres. Malheureusement tous les clients n'ont pas acces a toutes les memes fonctions. 
 
 
+## Ignorer les fichiers
+
+Pour ignorer les fichiers, il faut créer un fichier .gitignore à la racine du projet. Dans ce fichier, on peut mettre les fichiers que l'on veut ignorer. Par exemple, si on veut ignorer tous les fichiers .txt, on peut mettre *.txt dans le fichier .gitignore. Il est interessant d'ignorer les fichiers qui ne sont pas utiles au projet, comme les fichiers de configuration, Les fichier d'environnment (.env), les fichiers de logs, les fichiers de cache, les fichiers de dépendances, etc.
+
+## Synchronisation client/serveur
+
+Pour synchroniser le client et le serveur, il faut utiliser la commande git pull. Cette commande permet de récupérer les modifications du serveur et de les appliquer sur le client. Il faut faire attention à ne pas avoir de conflits entre les modifications du client et du serveur. Si il y a des conflits, il faut les résoudre avant de pouvoir faire un git pull. Pour ce faire l'utilisation de Branch et de Pull Request est conseillé. Tout cela permet de travailler à plusieurs sur un même projet et de sauvegarder l'historique d'un projet.
+
+## Création de branches dans Git
+
+Introduction
+Dans Git, les branches sont utilisées pour développer des fonctionnalités isolées les unes des autres. La branche principale est généralement appelée master. Lorsque vous créez une branche, vous créez une nouvelle ligne de développement qui est indépendante de la branche principale.
+
+### Commandes de base
+git branch
+Syntaxe: git branch [nom_de_la_branche]
+Description: Crée une nouvelle branche.
+
+Exemple:
+git branch ma-nouvelle-branche
+git checkout
+Syntaxe: git checkout [nom_de_la_branche]
+
+Description: Permet de basculer sur la branche spécifiée.
+
+Exemple:
+git checkout ma-nouvelle-branche
+Syntaxe alternative: git checkout -b [nom_de_la_branche]
+
+Description: Crée une nouvelle branche et bascule dessus simultanément.
+
+Exemple:
+git checkout -b ma-nouvelle-branche
+
+
+### Utilisation courante
+
+Vérifier la branche actuelle:
+git branch
+
+Créer une nouvelle branche:
+git branch ma-nouvelle-branche
+
+Basculer sur la nouvelle branche:
+git checkout ma-nouvelle-branche
+Faire des modifications:
+
+Modifier des fichiers.
+Utiliser git add pour préparer les changements.
+Utiliser git commit pour enregistrer les changements.
+
+
+###  Fusionner la branche:
+
+Retourner à la branche principale:
+git checkout master
+
+Fusionner la nouvelle branche:
+git merge ma-nouvelle-branche
+
+La gestion des branches dans Git est un aspect crucial de la gestion de versions. Elle permet à plusieurs développeurs de travailler sur différentes fonctionnalités en parallèle, sans interférer les uns avec les autres.
+
+
 ## Understanding `git log` in Git
 
 The `git log` command is used to display the commit history of a Git repository. It shows a list of commits along with their details like the hash, author, date, and commit message.
@@ -69,3 +132,4 @@ For a graphical representation of the commit history:
 Combining `--graph` with `--oneline` and `--all` gives a clear overview of the entire history, including all branches:
 
 `git log` is a powerful tool to understand the evolution of a project. With its various options and filters, you can get detailed insights into the history of your repository.
+
