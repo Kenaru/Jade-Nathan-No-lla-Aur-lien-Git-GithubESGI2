@@ -10,6 +10,12 @@
 - Ecrire sur une branche de travail (checkout, branch)
 - Fusionner une branche dans une autre (merge)
 
+## Ecrire dans l'historique
+
+Pour écrire dans l'historique, il faut utiliser la commande git add. Cette commande permet d'ajouter des fichiers dans l'index. L'index est un espace de stockage temporaire qui contient les fichiers qui seront ajoutés dans l'historique.
+L'enregistrement dans l'historique se fait au momment de l'utilisation de git commit qui est, en elle même, une version du projet. L'historique sera donc coomposé de tous les commit qu'on créera.
+
+
 ## Versionning avec Git et Github
 
 Les versions servent à gérer du texte, agnostiquer vis-à-vis du langage, sauvegardé l'historique des modification (versions), résolution des conflits entre les différentes versions, aide au changement de version.
@@ -43,7 +49,7 @@ Pour synchroniser le client et le serveur, il faut utiliser la commande git pull
 Introduction
 Dans Git, les branches sont utilisées pour développer des fonctionnalités isolées les unes des autres. La branche principale est généralement appelée master. Lorsque vous créez une branche, vous créez une nouvelle ligne de développement qui est indépendante de la branche principale.
 
-### Commandes de base
+#### Commandes de base
 git branch
 Syntaxe: git branch [nom_de_la_branche]
 Description: Crée une nouvelle branche.
@@ -65,7 +71,7 @@ Exemple:
 git checkout -b ma-nouvelle-branche
 
 
-### Utilisation courante
+#### Utilisation courante
 
 Vérifier la branche actuelle:
 git branch
@@ -82,7 +88,7 @@ Utiliser git add pour préparer les changements.
 Utiliser git commit pour enregistrer les changements.
 
 
-###  Fusionner la branche:
+####  Fusionner la branche:
 
 Retourner à la branche principale:
 git checkout master
