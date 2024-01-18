@@ -4,11 +4,14 @@
 ## Sommaire
 ### Les fonctions principales
 - Initialiser un depot(init), consulter l'etat de l'espace de travail (status)
-- Ecrire dans l'historique (add, commit)
-- Afficher l'historique (log) et les modifications en cours (diff) 
+- Ecrire dans l'historique (add, commit) / Afficher l'historique (log) et les modifications en cours (diff)
+- Versionning avec git et github
+- Systeme centralise/distribue
+- Interface Graphique
 - Ignorer les fichiers indesirables (.gitignore)
 - Synchronisation client-serveur (push, pull, clone)
 - Ecrire sur une branche de travail (checkout, branch)
+- Commande de base et utilisation
 - Fusionner une branche dans une autre (merge)
 
 ## Initialiser un depot et consulter le status
