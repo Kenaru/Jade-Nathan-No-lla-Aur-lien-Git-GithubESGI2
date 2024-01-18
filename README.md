@@ -1,41 +1,50 @@
-# Jade-Nathan-Noella-Aurelien-Git-GithubESGI2
 
-## Understanding `git log` in Git
+# Comprendre `git log` dans Git
 
-The `git log` command is used to display the commit history of a Git repository. It shows a list of commits along with their details like the hash, author, date, and commit message.
+La commande `git log` est utilisée pour afficher l'historique des commits d'un dépôt Git. Elle présente une liste de commits avec leurs détails tels que le hash, l'auteur, la date et le message du commit.
 
-## Basic Usage
+## Utilisation de Base
 
-To view the commit history, simply type:
+### Pour consulter l'historique des commits, tapez simplement
 
-This command will show a list of all commits starting with the most recent. By default, it displays the commit hash, author, date, and the commit message.
+git log
 
-## Viewing Specific Details
+Cette commande affiche la liste de tous les commits à partir du plus récent. Par défaut, elle montre le hash du commit, l'auteur, la date et le message du commit.
 
-You can customize the output of `git log` with various options:
+## Affichage de Détails Spécifiques
 
-- To see a condensed, one-line version of the history:
+git log --oneline
 
-- To include which files were altered and the relative number of changes in each file:
+## Pour inclure les fichiers modifiés et le nombre relatif de changements
 
-- To view the complete diff of each commit:
+git log --stat
 
-## Filtering the Log
+## Pour voir le diff complet de chaque commit
 
-You can also filter the output based on time, author, or files:
+git log -p
 
-- To show commits by a specific author:
+## Pour montrer les commits par un auteur spécifique
 
-- To show commits before a specific date:
+git log --author="Nom de l'Auteur"
 
-- To show commits that include a particular file:
+## Pour montrer les commits avant une date spécifique
 
-## Visualizing Commit History
+git log --before="AAAA-MM-JJ"
 
-For a graphical representation of the commit history:
+Pour montrer les commits comprenant un fichier spécifique :
 
-- Use the `--graph` option to see an ASCII graph of the branch and merge history:
+git log -- <chemin_du_fichier>
 
-Combining `--graph` with `--oneline` and `--all` gives a clear overview of the entire history, including all branches:
+## Visualisation Graphique de l'Historique
 
-`git log` is a powerful tool to understand the evolution of a project. With its various options and filters, you can get detailed insights into the history of your repository.
+## Pour une représentation graphique de l'historique des commits
+
+Utilisez l'option --graph pour voir un graphique ASCII de l'historique des branches et des fusions :
+
+git log --graph
+
+Combine --graph avec --oneline et --all pour un aperçu clair de tout l'historique, incluant toutes les branches :
+
+git log --graph --oneline --all
+
+git log est un outil puissant pour comprendre l'évolution d'un projet. Avec ses nombreuses options et filtres, il vous offre un aperçu détaillé de l'historique de votre dépôt.
