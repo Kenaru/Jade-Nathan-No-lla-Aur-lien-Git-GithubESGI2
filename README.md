@@ -1,5 +1,15 @@
 # Jade-Nathan-Noella-Aurelien-Git-GithubESGI2
 
+## Sommaire
+### Les fonctions principales
+- Initialiser un depot(init), consulter l'etat de l'espace de travail (status)
+- Ecrire dans l'historique (add, commit)
+- Afficher l'historique (log) et les modifications en cours (diff) 
+- Ignorer les fichiers indesirables (.gitignore)
+- Synchronisation client-serveur (push, pull, clone)
+- Ecrire sur une branche de travail (checkout, branch)
+- Fusionner une branche dans une autre (merge)
+
 
 ## Versionning avec Git et Github
 
