@@ -1,12 +1,6 @@
 
 # Comprendre `git log` dans Git
 
-La commande `git log` est utilisée pour afficher l'historique des commits d'un dépôt Git. Elle présente une liste de commits avec leurs détails tels que le hash, l'auteur, la date et le message du commit.
-
-## Utilisation de Base
-
-### Pour consulter l'historique des commits, tapez simplement
-
 git log
 
 Cette commande affiche la liste de tous les commits à partir du plus récent. Par défaut, elle montre le hash du commit, l'auteur, la date et le message du commit.
@@ -45,6 +39,5 @@ git log --graph
 
 Combine --graph avec --oneline et --all pour un aperçu clair de tout l'historique, incluant toutes les branches :
 
-git log --graph --oneline --all
-
 git log est un outil puissant pour comprendre l'évolution d'un projet. Avec ses nombreuses options et filtres, il vous offre un aperçu détaillé de l'historique de votre dépôt.
+
