@@ -1,4 +1,5 @@
 
+
 # Comprendre `git log` dans Git
 
 git log
@@ -25,7 +26,7 @@ git log --author="Nom de l'Auteur"
 
 git log --before="AAAA-MM-JJ"
 
-Pour montrer les commits comprenant un fichier spécifique :
+## Pour montrer les commits comprenant un fichier spécifique 
 
 git log -- <chemin_du_fichier>
 
