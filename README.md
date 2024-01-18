@@ -10,10 +10,14 @@
 - Ecrire sur une branche de travail (checkout, branch)
 - Fusionner une branche dans une autre (merge)
 
+## Initialiser un depot et consulter le status
+Pour initialiser un repertoire il suffit d'un `git init`
+Et pour verifier le status, un `git status` permet de voir les derniers commits et si le fichier est bien enregistre. Le nom du fichier est en rouge si ce n'est pas le cas et en vert si le fichier est bien enregistre. 
+
 ## Ecrire dans l'historique
 
-Pour écrire dans l'historique, il faut utiliser la commande git add. Cette commande permet d'ajouter des fichiers dans l'index. L'index est un espace de stockage temporaire qui contient les fichiers qui seront ajoutés dans l'historique.
-L'enregistrement dans l'historique se fait au momment de l'utilisation de git commit qui est, en elle même, une version du projet. L'historique sera donc coomposé de tous les commit qu'on créera.
+Pour écrire dans l'historique, il faut utiliser la commande `git add`. Cette commande permet d'ajouter des fichiers dans l'index. L'index est un espace de stockage temporaire qui contient les fichiers qui seront ajoutés dans l'historique.
+L'enregistrement dans l'historique se fait au momment de l'utilisation de `git commit` qui est, en elle même, une version du projet. L'historique sera donc coomposé de tous les commit qu'on créera.
 
 
 ## Versionning avec Git et Github
@@ -38,11 +42,11 @@ Differentes interfaces graphiques pour GitHub sont disponibles pour l'utiliser. 
 
 ## Ignorer les fichiers
 
-Pour ignorer les fichiers, il faut créer un fichier .gitignore à la racine du projet. Dans ce fichier, on peut mettre les fichiers que l'on veut ignorer. Par exemple, si on veut ignorer tous les fichiers .txt, on peut mettre *.txt dans le fichier .gitignore. Il est interessant d'ignorer les fichiers qui ne sont pas utiles au projet, comme les fichiers de configuration, Les fichier d'environnment (.env), les fichiers de logs, les fichiers de cache, les fichiers de dépendances, etc.
+Pour ignorer les fichiers, il faut créer un fichier `.gitignore` à la racine du projet. Dans ce fichier, on peut mettre les fichiers que l'on veut ignorer. Par exemple, si on veut ignorer tous les fichiers .txt, on peut mettre *.txt dans le fichier `.gitignore`. Il est interessant d'ignorer les fichiers qui ne sont pas utiles au projet, comme les fichiers de configuration, Les fichier d'environnment (.env), les fichiers de logs, les fichiers de cache, les fichiers de dépendances, etc.
 
 ## Synchronisation client/serveur
 
-Pour synchroniser le client et le serveur, il faut utiliser la commande git pull. Cette commande permet de récupérer les modifications du serveur et de les appliquer sur le client. Il faut faire attention à ne pas avoir de conflits entre les modifications du client et du serveur. Si il y a des conflits, il faut les résoudre avant de pouvoir faire un git pull. Pour ce faire l'utilisation de Branch et de Pull Request est conseillé. Tout cela permet de travailler à plusieurs sur un même projet et de sauvegarder l'historique d'un projet.
+Pour synchroniser le client et le serveur, il faut utiliser la commande `git pull`. Cette commande permet de récupérer les modifications du serveur et de les appliquer sur le client. Il faut faire attention à ne pas avoir de conflits entre les modifications du client et du serveur. Si il y a des conflits, il faut les résoudre avant de pouvoir faire un `git pull`. Pour ce faire l'utilisation de Branch et de Pull Request est conseillé. Tout cela permet de travailler à plusieurs sur un même projet et de sauvegarder l'historique d'un projet.
 
 ## Création de branches dans Git
 
@@ -50,7 +54,7 @@ Introduction
 Dans Git, les branches sont utilisées pour développer des fonctionnalités isolées les unes des autres. La branche principale est généralement appelée master. Lorsque vous créez une branche, vous créez une nouvelle ligne de développement qui est indépendante de la branche principale.
 
 #### Commandes de base
-git branch
+`git branch`
 Syntaxe: `git branch [nom_de_la_branche]`
 Description: `Crée une nouvelle branche.`
 
@@ -99,43 +103,44 @@ Fusionner la nouvelle branche:
 La gestion des branches dans Git est un aspect crucial de la gestion de versions. Elle permet à plusieurs développeurs de travailler sur différentes fonctionnalités en parallèle, sans interférer les uns avec les autres.
 
 
-## Understanding `git log` in Git
+# Comprendre `git log` dans Git
 
-The `git log` command is used to display the commit history of a Git repository. It shows a list of commits along with their details like the hash, author, date, and commit message.
+`git log`
 
-## Basic Usage
+Cette commande affiche la liste de tous les commits à partir du plus récent. Par défaut, elle montre le hash du commit, l'auteur, la date et le message du commit.
 
-To view the commit history, simply type:
+## Affichage de Détails Spécifiques
 
-This command will show a list of all commits starting with the most recent. By default, it displays the commit hash, author, date, and the commit message.
+`git log --oneline`
 
-## Viewing Specific Details
+## Pour inclure les fichiers modifiés et le nombre relatif de changements
 
-You can customize the output of `git log` with various options:
+`git log --stat`
 
-- To see a condensed, one-line version of the history:
+## Pour voir le diff complet de chaque commit
 
-- To include which files were altered and the relative number of changes in each file:
+`git log -p`
 
-- To view the complete diff of each commit:
+## Pour montrer les commits par un auteur spécifique
 
-## Filtering the Log
+`git log --author="Nom de l'Auteur"`
 
-You can also filter the output based on time, author, or files:
+## Pour montrer les commits avant une date spécifique
 
-- To show commits by a specific author:
+`git log --before="AAAA-MM-JJ"`
 
-- To show commits before a specific date:
+## Pour montrer les commits comprenant un fichier spécifique 
 
-- To show commits that include a particular file:
+`git log -- <chemin_du_fichier>`
 
-## Visualizing Commit History
+## Visualisation Graphique de l'Historique
 
-For a graphical representation of the commit history:
+## Pour une représentation graphique de l'historique des commits
 
-- Use the `--graph` option to see an ASCII graph of the branch and merge history:
+Utilisez l'option `--graph` pour voir un graphique ASCII de l'historique des branches et des fusions :
 
-Combining `--graph` with `--oneline` and `--all` gives a clear overview of the entire history, including all branches:
+`git log --graph`
 
-`git log` is a powerful tool to understand the evolution of a project. With its various options and filters, you can get detailed insights into the history of your repository.
+Combine `--graph` avec `--oneline` et `--all` pour un aperçu clair de tout l'historique, incluant toutes les branches :
 
+`git log` est un outil puissant pour comprendre l'évolution d'un projet. Avec ses nombreuses options et filtres, il vous offre un aperçu détaillé de l'historique de votre dépôt.
