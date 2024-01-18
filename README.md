@@ -1,5 +1,15 @@
 # Jade-Nathan-Noella-Aurelien-Git-GithubESGI2
 
+## Sommaire
+### Les fonctions principales
+- Initialiser un depot(init), consulter l'etat de l'espace de travail (status)
+- Ecrire dans l'historique (add, commit)
+- Afficher l'historique (log) et les modifications en cours (diff) 
+- Ignorer les fichiers indesirables (.gitignore)
+- Synchronisation client-serveur (push, pull, clone)
+- Ecrire sur une branche de travail (checkout, branch)
+- Fusionner une branche dans une autre (merge)
+
 ## Understanding `git log` in Git
 
 The `git log` command is used to display the commit history of a Git repository. It shows a list of commits along with their details like the hash, author, date, and commit message.
